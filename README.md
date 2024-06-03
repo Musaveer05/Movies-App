@@ -10,11 +10,27 @@ Private Movie Collection: Registered users can create and manage their own priva
 JWT Authentication: Secure user authentication is implemented using JSON Web Tokens (JWT). This ensures that users can securely access their private collections while maintaining their privacy.
 
 Technologies Used
-Frontend: HTML, CSS, JavaScript, EJS (Embedded JavaScript), Bootstrap
-Backend: Node.js, Express.js
-Database: MongoDB (with Mongoose ODM)
-Authentication: JSON Web Tokens (JWT)
-External API: Open Movie Database (OMDB)
+
+## Frontend
+- HTML
+- CSS
+- JavaScript
+- EJS (Embedded JavaScript)
+- Bootstrap
+
+## Backend
+- Node.js
+- Express.js
+
+## Database
+- MongoDB (with Mongoose ODM)
+
+## Authentication
+- JSON Web Tokens (JWT)
+
+## External API
+- Open Movie Database (OMDB)
+
 Getting Started
 To run the Movie App locally:
 
