@@ -35,7 +35,11 @@ Getting Started
 To run the Movie App locally:
 
 Clone this repository.
-Install dependencies using npm install.
-Create a .env file and configure your environment variables, including DB_URL for MongoDB connection and OMDB_API_KEY for accessing the OMDB API and JWT_SECRET key.
-Start the server using npm start.
-Open your browser and navigate to http://localhost:3000 to access the Movie App.
+
+Install dependencies using `npm install`.
+
+Create a `.env` file and configure your environment variables, including `DB_URL` for MongoDB connection, `OMDB_API_KEY` for accessing the OMDB API, and `JWT_SECRET` key.
+
+Start the server using `npm start`.
+
+Open your browser and navigate to `http://localhost:3000` to access the Movie App.
