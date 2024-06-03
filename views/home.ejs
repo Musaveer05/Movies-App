@@ -1,0 +1,74 @@
+<% layout('/layouts/boilerplate') %>
+
+    <div class="homeDiv">
+
+        <div class="searchBarWithLogo">
+            <div class="searchBar">
+                <form action="/search-movie" method="get" id="movieForm">
+                    <input type="text" placeholder="Enter Movie name" name="searchQuery">
+                    <button id="searchLogo"><i style="font-size:24px" class="fa">&#xf002;</i></button>
+                </form>
+            </div>
+            <div class="nav">
+                <span style="margin-left: 10px; color: wheat; margin-right: 10px;">Mv_movies </span>
+                <img id="navimg" src='movieLogo.png' alt="MoviesApp">
+            </div>
+        </div>
+
+        <h6 id="message"><%=message%></h6>
+
+        <div class="belowSearchBar">
+
+            <div class="movie-cards">
+
+                <% if (movies && movies.length) { %>
+                    <% movies.forEach(movie=> { %>
+                        <div class="movie-card">
+
+                            <div class="movie-poster-name">
+                                <h6>
+                                    <%= movie.Title %> (<%= movie.Year %>)
+                                </h6>
+                            </div>
+
+                            <div class="movie-poster-container">
+                                <img src="<%= movie.Poster %>" alt="<%= movie.Title %> Poster">
+                            </div>
+
+                    
+                            <div class="movie-poster-btn">
+                                <form action="/add-get-Private" method="POST">
+                                    <input type="hidden" name="Title" value="<%= movie.Title %>">
+                                    <input type="hidden" name="Year" value="<%= movie.Year %>">
+                                    <input type="hidden" name="imdbID" value="<%= movie.imdbID %>">
+                                    <input type="hidden" name="Type" value="<%= movie.Type %>">
+                                    <input type="hidden" name="Poster" value="<%= movie.Poster %>">
+                                    <button type="submit" class="add-to-privateBtn">
+                                        Add to PrivateList
+                                    </button>
+                                </form>
+                            </div>
+                            
+
+                        </div>
+                        <% }); %>
+                            <% } else { %>
+                                <p>Select Either Public or Private Videos to see.</p>
+                                <% } %>
+            </div>
+
+            <div class="select-watch-type">
+
+                <form action="/publicVideos" method="get">
+                    <button id="public-btn">Public Videos</button>
+                </form>
+
+                <form action="/add-get-Private" method="get">
+                    <button id="private-btn">Private Videos</button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>

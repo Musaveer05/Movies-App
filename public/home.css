@@ -1,0 +1,178 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    font-weight: bold;
+}
+
+.nav {
+    /* background-color: aliceblue; */
+    height:7vh;
+    display: flex;
+    align-items: center; 
+}
+
+#navimg {
+    height: 100%;  /* Making the image height 100% of the nav height */
+    width: auto; 
+}
+
+
+#mainBody{
+    width: 100vw;
+    height: 92vh;
+}
+
+.homeDiv{
+    width: 100vw;
+    height: 100%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    border: 1px wheat groove;
+    /* background-color: red; */
+}
+
+/* CSS Styles for Search Bar */
+
+
+.searchBarWithLogo{
+    display: flex;
+    justify-content: space-between;
+    height: 7%;
+    /* background-color: blue; */
+}
+
+.searchBar{
+    width: 70%;
+    background: white;
+    border: 0.1em wheat solid;
+}
+
+#movieForm{
+    display: flex;
+    align-items: center;
+}
+
+#movieForm, input{
+    width: 100%;
+    height: 100%;
+}
+
+#searchLogo{
+    border: none;
+    background-color: rgb(177, 175, 175);    width: 5%;
+    height: 100%;
+}
+
+/* CSS Styles for displaying message at Home Page */
+
+#message{
+    font-size: 15px;
+    text-align: center;
+    color: red;
+}
+
+/* CSS Styles for Below Search bar */
+
+.belowSearchBar{
+    background-color: rgba(245, 245, 245, 0.1);
+    height: 88%;
+    display: flex;
+    margin-top: 0.2em;
+}
+
+.movie-cards{
+    background: rgb(88, 88, 87);
+    width: 80%;
+    height: 100%;
+}
+
+.select-watch-type{
+    /* background-color: rgb(189, 255, 249); */
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#private-btn, #public-btn{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 0.5em;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+#public-btn:hover, #private-btn:hover {
+    background-color: black; 
+    color: whitesmoke;
+    transition: background-color 0.3s, color 0.3s; /* Add transitions for smooth hover effects */
+}
+
+
+/* logic for rendering the main movie content */
+
+.movie-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie-card {
+    width: 20%; 
+    height: 42%;
+    margin: 10px;
+    box-sizing: border-box; 
+    text-align: center; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+}
+
+
+.movie-poster-name{
+    height: 20%;
+}
+
+.movie-poster-container{
+    height: 70%;
+}
+
+.movie-poster-btn{
+    height: 12%;
+}
+
+.movie-card img {
+    max-width: 100%; /* Ensure the image inside each movie card fits within its container */
+    height:100% ;
+}
+
+.movie-card h6{
+    font-size: 10px;
+    color: white;
+}
+
+.add-to-privateBtn{
+    height: 100%;
+    font-size: 10px;
+}
+
+
+/* CSS styles for Sign Up and Sign In */
+
+.formDiv{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form{
+    width: 60%;
+    color: wheat;
+}
